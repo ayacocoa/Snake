@@ -1,0 +1,77 @@
+//变量
+@bg-color: #4db799;
+
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 3905172 */
+    src: url('//at.alicdn.com/t/c/font_3905172_gntty7hu36j.woff2?t=1678684923299') format('woff2'),
+        url('//at.alicdn.com/t/c/font_3905172_gntty7hu36j.woff?t=1678684923299') format('woff'),
+        url('//at.alicdn.com/t/c/font_3905172_gntty7hu36j.ttf?t=1678684923299') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 10px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: bold 20px;
+}
+
+#main {
+    // 主窗口的样式
+    width: 360px;
+    height: 420px;
+    background-color: @bg-color;
+    margin: 100px auto;
+    border: 10px solid black;
+    border-radius: 50px;
+    display: flex; //弹性盒
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+
+    #stage {
+        //游戏舞台
+        width: 304px;
+        height: 304px;
+        border: 2px solid black;
+        position: relative;
+
+        #snake {
+            &>div {
+                width: 10px;
+                height: 10px;
+                background-color: #000;
+                border: 1px solid @bg-color;
+                // 绝对定位
+                position: absolute;
+            }
+        }
+
+        #food {
+            width: 10px;
+            height: 10px;
+            // 绝对定位
+            position: absolute;
+            left: 40px;
+            top: 100px;
+        }
+    }
+}
+
+#bottom {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
