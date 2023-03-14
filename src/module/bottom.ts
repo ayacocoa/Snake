@@ -1,13 +1,13 @@
 // 定义底部栏的表示
 class Bottom {
     // 用来记录score level
-    private score: number = 0;
+     score: number = 0;
      level: number = 0;
     private maxLevel: number = 10;
-    private levelUp: number = 0;
+    private levelUp: number = 5;
     scoreEle: HTMLElement;
     levelEle: HTMLElement;
-    constructor(maxLevel: number = 10, levelUp: number = 5) {
+    constructor(maxLevel: number = 10, levelUp: number = 1) {
         this.scoreEle = document.getElementById("score")!;
         this.levelEle = document.getElementById("level")!;
         this.maxLevel = maxLevel;
